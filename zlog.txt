@@ -1,0 +1,32 @@
+Instalar RVM:
+  bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+¿Todo OK?
+  rvm requirements
+Recargar:
+  source ~/.bash_profile
+Nuevo ruby:
+  rvm install 1.9.2
+  rvm use 1.9.2 --default
+  which ruby
+Instalar Rails:
+  gem install rails
+Configurando git (PW: 8x1):
+  git config --global user.name "fercos"
+  git config --global user.email "fercos@xxx.com"
+  git config --list
+  ssh-keygen -C "fercos@xxx.com" -t rsa
+Empieza el control de versiones:
+  mkdir web
+  cd web
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  ++ En github.com >> account settings >> SSH Keys >> Add New SSH Key, pegar el id_rsa.pub
+  git remote add origin git@github.com:fercos/web.git
+  git push -u origin master
+Alta en Heroku
+  gem install heroku
+  heroku keys:add
+Bundler
+  gem install bundler
